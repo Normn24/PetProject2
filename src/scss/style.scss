@@ -125,6 +125,8 @@ a {
   height: 381px;
   object-fit: cover;
   object-position: 0% 0;
+  position: absolute;
+  right: 0;
 }
 
 @media screen and (min-width: 767px) {
