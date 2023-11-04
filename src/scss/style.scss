@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
-body {
+html, body {
   font-family: 'Lato', sans-serif;
   font-family: 'Montserrat', sans-serif;
   color: #011312;
   margin: 0;
   padding: 0;
+  height: 0;
 }
 
 p, h1, h2, h3, ul{
@@ -24,7 +25,7 @@ a {
 
 .features__container{
   max-width: 280px;
-  margin: 80px auto 120px;
+  margin: 80px auto 0;
   text-align: center;
 }
 
@@ -140,7 +141,7 @@ a {
 
 // Price html
 .price__container {
-  margin: 480px auto 120px;
+  margin: 480px auto;
   text-align: center;
   background-color: #4b3b4e;
   font-family: "Montserrat", sans-serif;
@@ -148,12 +149,13 @@ a {
 
 .price__title{
   max-width: 280px;
-  margin: 14px auto 32px;
+  margin: 0 auto 32px;
   color: #FFF;
   font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 42px;
+  padding-top: 74px;
 }
 
 .price__content{
@@ -441,6 +443,25 @@ a {
     max-width: 700px;
     height: 519px;
     margin-top: 70px;
+  }
+
+  .price__container{
+    background-size:cover;
+    margin-top: 34px;
+  }
+
+  .price__title{
+    max-width: 650px;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .price__content{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
