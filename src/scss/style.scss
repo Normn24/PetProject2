@@ -262,16 +262,16 @@ a {
     display: block;
     position: fixed;
     visibility: hidden;
-    top: -378px; /* Начальное значение - выше экрана */
-    left: 30px; /* Добавляем отступ слева */
-    right: 20px; /* Добавляем отступ справа */
-    width: calc(100% - 80px); /* Вычисляем ширину с учетом отступов */
+    top: -378px;
+    left: 35px;
+    right: 20px;
+    width: calc(100% - 80px);
     height: 220px;
     list-style: none;
     background: rgba(51, 51, 51, 1);
     box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
     transition-duration: 0.25s;
-    overflow-y: auto; /* Добавим скролл, если содержимое больше размеров блока */
+    overflow-y: auto;
     z-index: 2;
   }
   
@@ -285,20 +285,30 @@ a {
     line-height: 26px;
     letter-spacing: 0px;
     text-align: left;
-    transition-duration: 0.25s;
+    transition: 0.25s;
     border-bottom: 1px solid gray;
+    cursor: pointer;
   }
-
-  .menu-items > li:first-child {
+  
+  .menu-items > li.active {
     border-left: 8px solid rgba(141, 129, 172, 1);
-    color: rgba(141, 129, 172, 1); /* Установить первый пункт как активный по умолчанию */
+    color: rgba(141, 129, 172, 1);
+  }
+  
+  .menu-items > li:focus {
+    outline: none; 
+    background: rgba(141, 129, 172, 1); 
+    
   }
 
+  
+  
   .menu-items > li:active {
     color: rgba(141, 129, 172, 1);
     border-left: 8px solid rgba(141, 129, 172, 1);
     padding-right: 20px;
   }
+  
   
   #menu__toggle {
     opacity: 0;
@@ -333,4 +343,6 @@ a {
     cursor: pointer;
   } 
 }
+
+// 760
 
