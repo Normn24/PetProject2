@@ -308,7 +308,7 @@ a {
     border-bottom: 1px solid gray;
     cursor: pointer;
   }
-  
+
   #menu__toggle {
     opacity: 0;
   }
@@ -340,16 +340,8 @@ a {
   
   .menu-items > li:focus {
     outline: none; 
-    background: rgba(141, 129, 172, 1); 
+    color: rgba(141, 129, 172, 1); 
     
-  }
-
-  
-  
-  .menu-items > li:active {
-    color: rgba(141, 129, 172, 1);
-    border-left: 8px solid rgba(141, 129, 172, 1);
-    padding-right: 20px;
   }
   
   
