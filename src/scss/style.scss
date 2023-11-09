@@ -50,6 +50,7 @@ a {
   justify-content: space-between;
   z-index: 5;
   padding: 31px 30px 0px;
+  
 }
 
 .header_logo {
@@ -93,7 +94,7 @@ a {
 
 .menu-items li > a {
   padding: 0 30px;
-  font-family: Lato;
+  font-family: 'Lato' sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
@@ -110,6 +111,7 @@ a {
   height: 37px;
   background: #8d81ac;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 // fork app
@@ -132,6 +134,7 @@ a {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  
 }
 .fork-up h1 {
   font-family: 'Montserrat', sans-serif;
@@ -339,8 +342,8 @@ a {
 .grid-people-talking {
   display: grid;
   grid-template-columns: repeat(1, 255px);
-  grid-gap: 20px ;
-  padding-top: 50px;
+  grid-gap: 46px ;
+  padding-top: 53px;
   justify-content: center; 
 }
 
@@ -370,7 +373,7 @@ a {
   font-weight: 400;
   line-height: 21px;
   color: rgba(162, 145, 165, 0.4);
-  padding-top: 150px;
+  padding-top: 37px;
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto;
@@ -489,6 +492,16 @@ a {
       padding: 0;
       list-style: none;
       border-bottom: none;
+      
+    }
+    & li > a {
+      color: #8d81ac;
+      font-family: 'Montserrat' sans-serif;
+    }
+
+    & li > a:hover {
+      transition: 250ms;
+      color: white;
     }
 
     & li.active {
@@ -624,7 +637,10 @@ a {
       border-bottom: none;
       padding-left: 25px;
     }
-
+    & li > a {
+      color: #8d81ac;
+      font-family: 'Montserrat' sans-serif;
+    }
     & li.active {
       border-left: none;
     }
