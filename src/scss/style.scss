@@ -43,17 +43,34 @@ a {
 }
 
 .navbar {
-  padding-top: 31px;
+  background: rgba(39, 38, 42, 1);
+  height: 60px;
   display: flex;
-  justify-content: space-around;
-  text-align: center;
   align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+  padding: 31px 30px 0px;
 }
+
 .header_logo {
   display: flex;
   align-items: center;
 }
+
+.header_logo h2 {
+  display: none; /* Скроем текст "ForkIO" */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Добавляем выравнивание по вертикали */
+  width: 100%;
+
+} 
+
 .hamburger-menu {
+  width: 155px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,28 +97,35 @@ a {
   font-size: 16px;
   font-weight: 700;
   line-height: 16px;
-  color: rgba(141, 129, 172, 1);
+  color: rgba(255, 255, 255, 1);
 }
 
 .header-button{
   list-style: none;
-  width: 145px;
-  height: 38px;
-  background: rgba(141, 129, 172, 1);
   border: none;
   border-radius: 30px;
   color: white;
+  display: block;
+  width: 119px;
+  height: 37px;
+  background: #8d81ac;
   cursor: pointer;
 }
 
 // fork app
+.fork-up {
+  margin: 0 auto;
+}
+
 .fork-up > h1,
 .fork-up > h2,
 .fork-up > p {
-  margin: 0; /* Убираем отступы сверху и снизу между текстовыми элементами */
+  margin: 0; 
 }
 
+
 .fork-up {
+  margin: 0 auto;
   padding-top: 8%;
   display: flex;
   justify-content: center;
@@ -109,34 +133,32 @@ a {
   text-align: center;
   flex-direction: column;
 }
-
-.fork-up > h1 {
-  font-family: Montserrat;
-  font-size: 72px;
+.fork-up h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
   font-weight: 700;
-  line-height: 72px;
+  line-height: 48px;
   color: rgba(255, 255, 255, 1);
 }
 
-.fork-up > h2 {
-  padding-top: 12px;
-  font-family: Lato;
-  font-size: 24px;
+.fork-up h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   color: rgba(141, 129, 172, 1);
-
+  width: 291px;
+  padding: 19px 0 14px 0;
 }
 
-.fork-up > p {
-  padding-top: 25px;
-  font-family: Montserrat;
+.fork-up p {
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
   color: rgba(132, 142, 151, 0.4);
-
 }
+
 .bottom-donwload {
   list-style: none;
   width: 360px;
@@ -171,267 +193,127 @@ a {
   transform: translateX(-50%);
 }
 
-@media screen and (max-width: 759px) {
-  .navbar {
-    background: rgba(39, 38, 42, 1);
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 5;
-    padding: 31px 30px 0px;
-  }
-  .header_logo h2 {
-    display: none; /* Скроем текст "ForkIO" */
-  }
-
-  .navbar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Добавляем выравнивание по вертикали */
-    width: 100%;
-
-  }
-  .hamburger-menu {
-    width: 145px;
-  }
-  .menu-items > li > a {
-    color: rgba(255, 255, 255, 1);
-  }
-
-  .header-button {
-    display: block;
-    width: 119px;
-    height: 37px;
-    background: #8d81ac;
-    cursor: pointer;
-  }
-  // fork app
-  .fork-up {
-    margin: 0 auto;
-  }
-  .fork-up h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-    line-height: 48px;
-  }
-  
-  .fork-up h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 24px;
-    color: rgba(141, 129, 172, 1);
-    width: 291px;
-  }
-  
-  .fork-up p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 14px;
-  }
-
-  // гамбургер
-  .menu__btn {
-    display: flex;
-    align-items: center;
-    width: 26px;
-    height: 26px;
-    cursor: pointer;
-    z-index: 2;
-    position: absolute;
-    right: 30px;
-  }
-  
-  .menu__btn > span,
-  .menu__btn > span::before,
-  .menu__btn > span::after {
-    display: block;
-    position: absolute;
-    height: 3px;
-    background-color: white;
-    transition-duration: 0.25s;
-    border-radius: 6px;
-  }
-  .menu__btn > span::after,
-  .menu__btn > span {
-    width: 26px;
-  }
-
-  .menu__btn > span::before {
-    width: 13px;
-    left: 13px;
-  }
-  .menu__btn > span::before {
-    content: '';
-    top: -8px;
-  }
-  
-  .menu__btn > span::after {
-    content: '';
-    top: 8px;
-  }
-  .unlimited-p {
-    width: 200px;
-  }
-  
-  .menu-items {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    top: -378px;
-    left: 37px;
-    right: 20px;
-    width: calc(100% - 80px);
-    height: 220px;
-    list-style: none;
-    background: rgba(51, 51, 51, 1);
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-    transition-duration: 0.45s;
-    overflow-y: auto;
-    z-index: 7;
-  }
-  
-  .menu-items > li {
-    display: block;
-    padding: 12px 24px;
-    color: rgba(255, 255, 255, 1);
-    font-family: 'Roboto', sans-serif;
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0px;
-    text-align: left;
-    transition: 0.45s;
-    border-bottom: 1px solid gray;
-    cursor: pointer;
-  }
-
-  #menu__toggle {
-    opacity: 0;
-  }
-  
-  #menu__toggle:checked ~ .menu__btn > span {
-    transform: rotate(45deg);
-  }
-  
-  #menu__toggle:checked ~ .menu__btn > span::before {
-    top: 0;
-    transform: rotate(0);
-  }
-  
-  #menu__toggle:checked ~ .menu__btn > span::after {
-    top: 0;
-    transform: rotate(90deg);
-  }
-  
-  #menu__toggle:checked ~ .menu-items {
-    visibility: visible;
-    top: 91px;
-  }
-  
-  
-  .menu-items > li.active {
-    border-left: 8px solid rgba(141, 129, 172, 1);
-    color: rgba(141, 129, 172, 1);
-  }
-  
-  .menu-items > li:focus {
-    outline: none; 
-    color: rgba(141, 129, 172, 1); 
-    
-  }
-  
-  
-
-
-  // кнопка внизу
-  .bottom-donwload {
-    width: 290px;
-    height: 45px;
-    border-radius: 40px;
-    cursor: pointer;
-  } 
+.menu__btn {
+  display: flex;
+  align-items: center;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  right: 30px;
 }
 
-// 760
-
-@media screen and (min-width: 760px) and (max-width: 1200px) {
-  .navbar {
-    background: rgba(39, 38, 42, 1);
-    height: 70px;
-    flex-direction: column;
-  }
-
-  .menu-items {
-    margin: 0 auto;
-    padding-top: 21px;
-  }
-
-  .menu-items > li  {
-    padding-left: 25px;
-  }
-
-  .header-button {
-    width: 145px;
-    height: 38px;
-    position: absolute;
-    top: 2%;
-    right: 2%;
-  }
-
-  .header_logo {
-    position: absolute;
-    top: 2%;
-    left: 5%;
-  }
-
-  .fork-up {
-    margin: 0 auto;
-    width: 601px;
-  }
-  .fork-up > h1 { 
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 72px;
-  }
-  .fork-up > h2 {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-
-  }
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  height: 3px;
+  background-color: white;
+  transition-duration: 0.25s;
+  border-radius: 6px;
+}
+.menu__btn > span::after,
+.menu__btn > span {
+  width: 26px;
 }
 
-// hover 
+.menu__btn > span::before {
+  width: 13px;
+  left: 13px;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
 
-.menu-items > li > a:hover {
-  transition: 350ms;
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.unlimited-p {
+  width: 200px;
+}
+
+.menu-items {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: -378px;
+  left: 37px;
+  right: 20px;
+  width: calc(100% - 80px);
+  height: 220px;
+  list-style: none;
+  background: rgba(51, 51, 51, 1);
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  transition-duration: 0.45s;
+  overflow-y: auto;
+  z-index: 7;
+}
+
+.menu-items > li {
+  display: block;
+  padding: 12px 24px;
   color: rgba(255, 255, 255, 1);
+  font-family: 'Roboto', sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0px;
+  text-align: left;
+  transition: 0.45s;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
 }
 
-.header-button:hover,
-.bottom-donwload:hover {
-  transition: 350ms;
-  border: 1px solid rgba(141, 129, 172, 1);
-  background: rgba(255, 255, 255, 1);
+#menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu-items {
+  visibility: visible;
+  top: 91px;
+}
+
+
+.menu-items > li.active {
+  border-left: 8px solid rgba(141, 129, 172, 1);
   color: rgba(141, 129, 172, 1);
 }
 
-.header_logo > h2 > a:hover {
-  transition: 350ms;
-  color: rgba(255, 255, 255, 1);
+.menu-items > li:focus {
+  outline: none; 
+  color: rgba(141, 129, 172, 1); 
+  
 }
 
-.header_logo a:hover svg {
-  fill: white; 
-}
+// кнопка внизу
+.bottom-donwload {
+  width: 290px;
+  height: 45px;
+  border-radius: 40px;
+  cursor: pointer;
+} 
 
 
 
-// People Are Talking About Fork ----------------------------------------
+// Grid 
 
 .people-talking {
   padding-top: 85px;
@@ -440,24 +322,26 @@ a {
   background-position: center;
   background-attachment: fixed;
   max-width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 
 .people-talking > h2 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 42px;
-  font-weight: 700;
-  line-height: 44px;
-  text-align: center;
   color: rgba(255, 255, 255, 1);
-  margin-bottom: 60px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  text-align: center;
+  margin: 0 auto;
+  width: 251px;
 }
 
 .grid-people-talking {
   display: grid;
-  grid-template-columns: repeat(3, 255px);
+  grid-template-columns: repeat(1, 255px);
+  grid-gap: 20px ;
+  padding-top: 50px;
   justify-content: center; 
-  gap: 130px;
 }
 
 .grid-item {
@@ -488,14 +372,291 @@ a {
   color: rgba(162, 145, 165, 0.4);
   padding-top: 150px;
   padding-bottom: 20px;
-  width: 880px;
-  border-bottom: 1px solid rgba(100, 87, 102, 0.5);
   text-align: center;
   margin: 0 auto;
+  border-bottom: 1px solid rgba(100, 87, 102, 0.5);
+  max-width: 251px;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  .navbar {
+    padding: 42px 90px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+  }
+
+  .header_logo h2 {
+    display: block; /* Скроем текст "ForkIO" */
+  }
+
+
+  .header_logo h2 > a {
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgba(141, 129, 172, 1);
+  }
+
+  .hamburger-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-button {
+    list-style: none;
+    width: 145px;
+    height: 38px;
+    background: rgba(141, 129, 172, 1);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+  // fork app
+  .fork-up {
+    padding-top: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .fork-up h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 72px;
+  }
+  
+  .fork-up h2 {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 19px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgba(141, 129, 172, 1);
+    width: auto;
+  }
+  
+  .fork-up p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    padding-top: 19px;
+
+  }
+
+  .navbar-container{
+    justify-content: flex-end;
+  }
+
+  .hamburger-menu {
+    width: max-content;
+  }
+
+  .menu__btn{
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    visibility: visible;
+    position: relative;
+    background: none;
+    box-shadow: none;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    & li, ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-bottom: none;
+    }
+
+    & li.active {
+      border-left: none;
+    }
+  }
+
+  // кнопка внизу
+  .bottom-donwload {
+    list-style: none;
+    width: 360px;
+    height: 62px;
+    background: rgba(141, 129, 172, 1);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0px;
+    text-align: center;
+    position: absolute;
+    bottom: -30px; // потом тут просто поменять и все 
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+  } 
+
+  .unlimited-p {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    text-align: center;  
+    color: rgba(132, 142, 151, 0.5);
+    position: absolute;
+    bottom: -55px; // потом тут просто поменять и все 
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  // grid
+  .grid-people-talking {
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
+    justify-content: center; 
+    gap: 130px;
+  }
+
+  .people-talking > h2 {
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 44px;
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 60px;
+    width: 100%;
+  }
+
+  .people-bottom-paragpaph {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    padding-top: 150px;
+    padding-bottom: 20px;
+    width: 880px;
+    border-bottom: 1px solid rgba(100, 87, 102, 0.5);
+    text-align: center;
+    margin: 0 auto;
+    max-width: 887px;
+  }
 
 }
 
-@media screen and (min-width: 727px) and (max-width: 1200px) { 
+// 760
+
+@media screen and (min-width: 760px) and (max-width: 1200px) {
+  .navbar {
+    background: rgba(39, 38, 42, 1);
+    height: 70px;
+    flex-direction: column;
+  }
+
+  .header_logo {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
+
+  .header_logo h2 {
+    display: block; /* Скроем текст "ForkIO" */
+  }
+
+  
+  .navbar-container{
+    height: 70px;
+  }
+
+  .hamburger-menu {
+    width: max-content;
+    height: max-content;
+  }
+
+  .menu__btn{
+    display: none;
+  }
+
+  .menu-items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    visibility: visible;
+    position: relative;
+    background: none;
+    box-shadow: none;
+    margin: 0 auto;
+    transition-duration: 0s;
+    padding-top: 21px;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    & li, ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      border-bottom: none;
+      padding-left: 25px;
+    }
+
+    & li.active {
+      border-left: none;
+    }
+  }
+
+  .header-button {
+    width: 145px;
+    height: 38px;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+  }
+
+  .fork-up {
+    margin: 0 auto;
+    width: 601px;
+  }
+  .fork-up > h1 { 
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 72px;
+  }
+  .fork-up > h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  width: auto;  
+  padding: 19px 0;
+  }
+
+
+  // Grid
   .grid-people-talking {
     grid-template-columns: repeat(2, 255px);
     gap: 50px 200px;
@@ -515,32 +676,34 @@ a {
   .pihel {
     padding-top: 37px;
   }
-}
 
-@media screen and (max-width:727px) {
-  .people-talking {
-    height: 100%;
-  }
-  .grid-people-talking {
-    grid-template-columns: repeat(1, 255px);
-    grid-gap: 20px ;
-    padding-top: 50px;
-  }
-
-  .people-talking > h2 { 
-    font-family: Montserrat;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 48px;
-    text-align: center;
-    margin: 0 auto;
-    width: 251px;
-  }
 
   .people-bottom-paragpaph {
     border-bottom: 1px solid rgba(100, 87, 102, 0.5);
-    max-width: 251px;
-
+    max-width: 700px;
   }
+}
 
+// hover 
+
+.menu-items > li > a:hover {
+  transition: 350ms;
+  color: rgba(255, 255, 255, 1);
+}
+
+.header-button:hover,
+.bottom-donwload:hover {
+  transition: 350ms;
+  border: 1px solid rgba(141, 129, 172, 1);
+  background: rgba(255, 255, 255, 1);
+  color: rgba(141, 129, 172, 1);
+}
+
+.header_logo > h2 > a:hover {
+  transition: 350ms;
+  color: rgba(255, 255, 255, 1);
+}
+
+.header_logo a:hover svg {
+  fill: white; 
 }
