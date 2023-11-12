@@ -1,11 +1,26 @@
-@font-face {
-  font-family: Montserrat ;
-  src: url("../fonts/Montserrat-VariableFont_wght.ttf");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
 }
 
-@font-face {
-  font-family: Lato;
-  src: url("../fonts/Lato-Italic.ttf");
+html, body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  color: #011312;
+  margin: 0;
+  padding: 0;
+}
+
+p, h1, h2, h3, ul{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  outline: 0;
 }
 
 ul, li {
@@ -14,14 +29,6 @@ ul, li {
   list-style: none;
 }
 
-a {
-  text-decoration: none; /* Убираем подчеркивание ссылок */
-}
-
-*{
-  margin: 0;
-  padding: 0;
-}
 
 #menu__toggle {
   opacity: 0;
@@ -49,7 +56,7 @@ a {
   align-items: center;
   justify-content: space-between;
   z-index: 5;
-  padding: 31px 30px 0px;
+  padding: 20px 30px;
   
 }
 
@@ -93,10 +100,9 @@ a {
 }
 
 .menu-items li > a {
-  padding: 0 30px;
-  font-family: 'Lato' sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
   line-height: 16px;
   color: rgba(255, 255, 255, 1);
 }
@@ -106,11 +112,13 @@ a {
   border: none;
   border-radius: 30px;
   color: white;
-  display: block;
+  display: block; 
   width: 119px;
   height: 37px;
   background: #8d81ac;
   cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -124,48 +132,6 @@ a {
 .fork-up > p {
   margin: 0; 
 }
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
-
-html, body {
-  font-family: 'Lato', sans-serif;
-  font-family: 'Montserrat', sans-serif;
-  color: #011312;
-  margin: 0;
-  padding: 0;
-  height: 0;
-}
-
-p, h1, h2, h3, ul{
-  margin: 0;
-  padding: 0;
-}
-
-ul{
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-  outline: 0;
-}
-
-.features__container{
-  max-width: 280px;
-  margin: 80px auto 0;
-  text-align: center;
-}
-
-.features__title{
-  color: #635C73;
-  text-align: center;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 27px;
-}
-
 .fork-up {
   margin: 0 auto;
   padding-top: 8%;
@@ -199,7 +165,7 @@ a {
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
-  color: rgba(132, 142, 151, 0.4);
+  color: #848E97;
 }
 
 .bottom-donwload {
@@ -229,9 +195,9 @@ a {
   font-weight: 400;
   line-height: 15px;
   text-align: center;  
-  color: rgba(132, 142, 151, 0.5);
+  color: #848E97;
   position: absolute;
-  bottom: -55px; // потом тут просто поменять и все 
+  bottom: -70px; // потом тут просто поменять и все 
   left: 50%;
   transform: translateX(-50%);
 }
@@ -300,14 +266,14 @@ a {
   display: block;
   padding: 12px 24px;
   color: rgba(255, 255, 255, 1);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0px;
   text-align: left;
   transition: 0.45s;
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
   cursor: pointer;
 }
 
@@ -331,13 +297,14 @@ a {
 
 #menu__toggle:checked ~ .menu-items {
   visibility: visible;
-  top: 91px;
+  top: 100px;
 }
 
 
 .menu-items > li.active {
   border-left: 8px solid rgba(141, 129, 172, 1);
   color: rgba(141, 129, 172, 1);
+  padding-left: 15px;
 }
 
 .menu-items > li:focus {
@@ -356,6 +323,8 @@ a {
 
 
 
+
+
 // Grid 
 
 .people-talking {
@@ -363,9 +332,9 @@ a {
   background-image: url('../img/backgraund/people_bg.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   max-width: 100vw;
   height: 100%;
+  margin-top: 420px;
 }
 
 .people-talking > h2 {
@@ -417,8 +386,10 @@ a {
   padding-bottom: 20px;
   text-align: center;
   margin: 0 auto;
-  border-bottom: 1px solid rgba(100, 87, 102, 0.5);
+  border-bottom: 2px solid #645766;
   max-width: 251px;
+  position: relative;
+  z-index: 10;
 }
 
 
@@ -454,7 +425,7 @@ a {
 
   .header-button {
     list-style: none;
-    width: 145px;
+    width: 165px;
     height: 38px;
     background: rgba(141, 129, 172, 1);
     border: none;
@@ -484,23 +455,22 @@ a {
   .fork-up h2 {
     font-family: 'Montserrat', sans-serif;
     padding-top: 19px;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 24px;
-    color: rgba(141, 129, 172, 1);
+    color: #8D81AC;
     width: auto;
   }
   
   .fork-up p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 14px;
-    font-size: 14px;
     font-weight: 400;
-    line-height: 14px;
     padding-top: 19px;
-
+    color: #848E97;
+    text-transform: uppercase;
   }
 
   .navbar-container{
@@ -518,6 +488,7 @@ a {
   .menu-items {
     display: flex;
     text-align: center;
+    justify-content: space-between;
     align-items: center;
     visibility: visible;
     position: relative;
@@ -526,6 +497,9 @@ a {
     top: 0;
     left: 0;
     right: 0;
+    height: 30px;
+    width: 520px;
+    margin-right: 40px;
 
     & li, ul {
       margin: 0;
@@ -536,7 +510,9 @@ a {
     }
     & li > a {
       color: #8d81ac;
-      font-family: 'Montserrat' sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
     }
 
     & li > a:hover {
@@ -572,16 +548,21 @@ a {
   } 
 
   .unlimited-p {
-    font-family: Montserrat;
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;;
     font-size: 14px;
     font-weight: 400;
     line-height: 15px;
     text-align: center;  
-    color: rgba(132, 142, 151, 0.5);
+    color: #848E97;
     position: absolute;
-    bottom: -55px; // потом тут просто поменять и все 
+    bottom: -65px; // потом тут просто поменять и все 
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .people-talking{
+    margin-top: 15px;
   }
 
   // grid
@@ -612,7 +593,7 @@ a {
     padding-top: 150px;
     padding-bottom: 20px;
     width: 880px;
-    border-bottom: 1px solid rgba(100, 87, 102, 0.5);
+    border-bottom: 2px solid #645766;
     text-align: center;
     margin: 0 auto;
     max-width: 887px;
@@ -625,13 +606,13 @@ a {
 @media screen and (min-width: 760px) and (max-width: 1200px) {
   .navbar {
     background: rgba(39, 38, 42, 1);
-    height: 70px;
     flex-direction: column;
+    padding-top: 63px;
   }
 
   .header_logo {
     position: absolute;
-    top: 2%;
+    top: 24px;
     left: 5%;
   }
 
@@ -639,14 +620,9 @@ a {
     display: block; /* Скроем текст "ForkIO" */
   }
 
-  
-  .navbar-container{
-    height: 70px;
-  }
-
   .hamburger-menu {
     width: max-content;
-    height: max-content;
+    height: 40px;
   }
 
   .menu__btn{
@@ -662,24 +638,24 @@ a {
     background: none;
     box-shadow: none;
     margin: 0 auto;
+    justify-content: space-between;
     transition-duration: 0s;
-    padding-top: 21px;
     height: 100%;
-    width: 100%;
+    width: 520px;
     top: 0;
     left: 0;
     right: 0;
 
     & li, ul {
       margin: 0;
-      padding: 0;
       list-style: none;
       border-bottom: none;
-      padding-left: 25px;
+      padding: 0;
     }
     & li > a {
       color: #8d81ac;
-      font-family: 'Montserrat' sans-serif;
+      font-size: 16px;
+      padding: 0;
     }
     & li.active {
       border-left: none;
@@ -690,7 +666,7 @@ a {
     width: 145px;
     height: 38px;
     position: absolute;
-    top: 2%;
+    top: 24px;
     right: 2%;
   }
 
@@ -713,6 +689,11 @@ a {
 
 
   // Grid
+  .people-talking{
+    margin-top: 530px; 
+
+  }
+
   .grid-people-talking {
     grid-template-columns: repeat(2, 255px);
     gap: 50px 200px;
@@ -728,15 +709,11 @@ a {
     width: 600px;
     margin: 0 auto;
     padding-top: 60px;
+    border-bottom: 2px solid #645766;
+    max-width: 700px;
   }
   .pihel {
     padding-top: 37px;
-  }
-
-
-  .people-bottom-paragpaph {
-    border-bottom: 1px solid rgba(100, 87, 102, 0.5);
-    max-width: 700px;
   }
 }
 
@@ -763,6 +740,20 @@ a {
 .header_logo a:hover svg {
   fill: white; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .features__text{
   color: #323232;
   font-family: 'Lato', sans-serif;
@@ -779,6 +770,25 @@ a {
   justify-content: space-around;
   margin: 36px auto 120px;
 }
+
+
+.features__container{
+  max-width: 280px;
+  margin: 130px auto 0;
+  text-align: center;
+}
+
+.features__title{
+  color: #635C73;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 27px;
+}
+
 
 .button__content {
   overflow: hidden;
@@ -864,10 +874,11 @@ a {
 
 // Price html
 .price__container {
-  margin: 480px auto;
+  margin: 0 auto;
   text-align: center;
   background-color: #4b3b4e;
   font-family: "Montserrat", sans-serif;
+  margin-top: -14px;
 }
 
 .price__title{
@@ -1036,12 +1047,12 @@ a {
   // Price html
 
   .price__container{
-    margin-top: 600px;
     background-image: url(../img/bg-price.png);
     background-repeat: no-repeat;
     overflow: hidden;
     background-color: #4b3b4e;
     background-position: 50% 0;
+    margin-top: -10px;
   }
 
   .price__title{
@@ -1103,9 +1114,9 @@ a {
 @media screen and (min-width: 1200px) {
   
   .features__container{
+    margin-top: 130px;
     min-width: 1200px;
-    width: 1300px;
-    max-width: 1900px;
+    max-width: 1300px;
   }
 
     
@@ -1169,8 +1180,8 @@ a {
   }
 
   .price__container{
+    margin-top: -9px;
     background-size:cover;
-    margin-top: 34px;
   }
 
   .price__title{
