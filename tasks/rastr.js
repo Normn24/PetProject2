@@ -12,6 +12,6 @@ module.exports = function rastr() {
 			progressive: true,
 			optimizationLevel: 5,
 		}),)
-		.pipe(dest('build/img'))
+		.pipe(dest('dist/img'))
 		.pipe(bs.stream())
 }
