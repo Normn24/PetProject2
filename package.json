@@ -6,7 +6,7 @@
   "scripts": {
     "html": "gulp",
     "start": "gulp",
-    "build": "gulp style && gulp build_js && gulp rastr && gulp html"
+    "dist": "gulp style && gulp build_js && gulp rastr && gulp html"
   },
   "author": "",
   "license": "ISC",
